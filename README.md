@@ -19,10 +19,8 @@ Dependencies include:
 Once dependencies are available, making the outputs can be done via:
 
     #trigger make
-    touch source/the_ms.md
+    touch source/*
 
     #run make
     make
 
-    #clean up intermediate tex files
-    make clean
