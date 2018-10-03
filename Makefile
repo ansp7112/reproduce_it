@@ -62,9 +62,16 @@ $(tx): $(md) $(meta) $(format) $(bib) $(figs)
 		--bibliography $(bib) \
 		--csl $(my_csl)
 
-#pdf from tex
-$(pdf): $(tx)
-	xelatex $(tx)
+#output pdf from md
+$(pdf): $(md) $(meta) $(format) $(bib) $(figs)
+	pandoc -s $(md) \
+		$(meta) \
+		$(format) \
+		-o $(pdf) \
+		--filter pandoc-fignos \
+		--filter pandoc-tablenos \
+		--bibliography $(bib) \
+		--csl $(my_csl)
 
 #output docx from md
 $(docx): $(md) $(metadata) $(format) $(bib) $(figs)
@@ -76,3 +83,6 @@ $(docx): $(md) $(metadata) $(format) $(bib) $(figs)
 		--filter pandoc-tablenos \
 		--bibliography $(bib) \
 		--csl $(my_csl)
+
+clean:
+	rm *log *aux *out
