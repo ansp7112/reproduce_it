@@ -3,7 +3,7 @@
 ###############################
 
 md = source/the_ms.md
-tx = source/the_ms.tex
+tx = output/the_ms.tex
 pdf = output/the_ms.pdf
 docx = output/the_ms.docx
 format = source/format.yaml
