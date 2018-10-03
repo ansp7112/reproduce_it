@@ -2,9 +2,6 @@
 ## MAKE VARIABLES AND RECIPE ##
 ###############################
 
-R_outs = figures/flight.pdf figures/flight.png output/r_vars.tex
-py_outs = output/py_vars.tex
-
 md = source/the_ms.md
 tx = source/the_ms.tex
 pdf = output/the_ms.pdf
@@ -13,16 +10,21 @@ format = source/format.yaml
 meta = source/metadata.yaml
 bib = source/simple.bib
 
+figs = figures/flight.pdf figures/flight.png 
+
+R_outs = output/r_vars.tex
+py_outs = output/py_vars.tex
 
 #GNU make looks for updates the files that each of these depend on
-all: $(tx) $(pdf) $(docx) $(R_outs) $(py_outs)
+all: source/the_ms.tex
+
 
 ##############
 ## ANALYSES ##
 ##############
 
 #produce figure and R variable
-$(R_outs): source/flight.R
+$(figs): source/flight.R
 	Rscript source/flight.R
 
 $(py_outs): source/python_too.py
@@ -44,12 +46,13 @@ source/apa.csl:
 my_csl=source/cell.csl
 
 
+
 ###############
 ## DOCUMENTS ##
 ###############
 
-#output to tex
-$(tx): $(md) $(meta) $(format) $(bib) $(R_outs) $(py_outs)
+#output to tex from md
+$(tx): $(md) $(meta) $(format) $(bib) $(figs)
 	pandoc -s $(md) \
 		$(meta) \
 		$(format) \
@@ -59,11 +62,12 @@ $(tx): $(md) $(meta) $(format) $(bib) $(R_outs) $(py_outs)
 		--bibliography $(bib) \
 		--csl $(my_csl)
 
+#pdf from tex
 $(pdf): $(tx)
 	xelatex $(tx)
 
-#output docx
-$(docx): $(md) $(metadata) $(format) $(bib) $(R_outs) $(py_outs)
+#output docx from md
+$(docx): $(md) $(metadata) $(format) $(bib) $(figs)
 	pandoc -s $(md) \
 		$(metadata) \
 		$(format) \
@@ -72,4 +76,3 @@ $(docx): $(md) $(metadata) $(format) $(bib) $(R_outs) $(py_outs)
 		--filter pandoc-tablenos \
 		--bibliography $(bib) \
 		--csl $(my_csl)
-
