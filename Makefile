@@ -84,5 +84,3 @@ $(docx): $(md) $(metadata) $(format) $(bib) $(figs)
 		--bibliography $(bib) \
 		--csl $(my_csl)
 
-clean:
-	rm *log *aux *out

@@ -16,3 +16,13 @@ Dependencies include:
 
 1. [GNU make](https://www.gnu.org/software/make/)
 
+Once dependencies are available, making the outputs can be done via:
+
+    #trigger make
+    touch source/the_ms.md
+
+    #run make
+    make
+
+    #clean up intermediate tex files
+    make clean
