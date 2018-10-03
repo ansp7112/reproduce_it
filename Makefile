@@ -2,7 +2,7 @@
 ## MAKE VARIABLES AND RECIPE ##
 ###############################
 
-R_outs = figures/flight.pdf output/r_vars.tex
+R_outs = figures/flight.pdf figures/flight.png output/r_vars.tex
 py_outs = output/py_vars.tex
 
 md = source/the_ms.md

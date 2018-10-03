@@ -21,7 +21,7 @@ $$\sum_{e}^{2} \mid \frac{\theta}{\lambda}$$
 
 The figure can be referenced in-text ({@fig:flight}).
 
-![Something about flights](flight.png){#fig:flight }
+![Something about flights](figures/flight.png){#fig:flight }
 
 Conclusion
 ----------

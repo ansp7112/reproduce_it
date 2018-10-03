@@ -8,4 +8,4 @@ def ship_var(var_name, file_name):
 	return 0
 
 pyvar = 3.7
-ship_var(pyvar, "py_vars.tex")
+ship_var(pyvar, "source/py_vars.tex")

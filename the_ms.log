@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.7.26)  2 OCT 2018 20:38
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.7.26)  2 OCT 2018 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1013,8 +1013,7 @@ Package ExtSizes Warning: It is better to use one of the extsizes classes,
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
-)) (./r_vars.tex)
-(./py_vars.tex) (./the_ms.aux)
+)) (./source/r_vars.tex) (./source/py_vars.tex) (./the_ms.aux)
 \openout1 = `the_ms.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
@@ -1033,7 +1032,8 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 69.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 69.
- (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
+
+(/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 69.
@@ -1166,9 +1166,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 90.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 90.
-File: flight.png Graphic file (type QTm)
+File: figures/flight.png Graphic file (type QTm)
 
-<use  "flight.png" > [1
+<use  "figures/flight.png" > [1
 
 ] [2]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
@@ -1178,9 +1178,9 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 113.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 113.
  ) 
 Here is how much of TeX's memory you used:
- 33093 strings out of 493638
- 622391 string characters out of 6146796
- 643387 words of memory out of 5000000
+ 33094 strings out of 493638
+ 622435 string characters out of 6146796
+ 643422 words of memory out of 5000000
  36080 multiletter control sequences out of 15000+600000
  28695 words of font info for 58 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191

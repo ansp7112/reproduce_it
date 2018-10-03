@@ -21,8 +21,8 @@ f_plot <- flights %>%
   xlab("log air time") +
   ylab("log distance")
 
-ggsave(filename = "flight.pdf", plot = f_plot)
-ggsave(filename = "flight.png", plot = f_plot, device = "png")
+ggsave(filename = "figures/flight.pdf", plot = f_plot)
+ggsave(filename = "figures/flight.png", plot = f_plot, device = "png")
 
 meandistance <- mean(flights$distance)
-ship_var(meandistance, "r_vars.tex")
+ship_var(meandistance, "source/r_vars.tex")
