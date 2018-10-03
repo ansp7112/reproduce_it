@@ -16,7 +16,7 @@ R_outs = output/r_vars.tex
 py_outs = output/py_vars.tex
 
 #GNU make looks for updates the files that each of these depend on
-all: source/the_ms.tex
+all: $(docx) $(pdf)
 
 
 ##############
